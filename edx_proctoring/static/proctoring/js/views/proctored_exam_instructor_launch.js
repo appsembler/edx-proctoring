@@ -9,7 +9,7 @@ edx = edx || {};
         initialize: function() {
             var self = this;
             this.setElement($('.student-review-dashboard-container'));
-            this.tempate_url = '/static/proctoring/templates/dashboard.underscore';
+            this.tempate_url = (window.baseUrl || '/static/') + 'proctoring/templates/dashboard.underscore';
             this.iframeHTML = null;
             this.doRender = true;
             this.context = {
