@@ -45,7 +45,7 @@ edx = edx || {};
         initialize: function() {
             this.setElement($('.student-proctored-exam-container'));
             this.collection = new edx.instructor_dashboard.proctoring.ProctoredExamAttemptCollection();
-            this.tempate_url = '/static/proctoring/templates/student-proctored-exam-attempts.underscore';
+            this.tempate_url = (window.baseUrl || '/static/') + 'proctoring/templates/student-proctored-exam-attempts.underscore';
             this.model = new edx.instructor_dashboard.proctoring.ProctoredExamAttemptModel();
             this.course_id = this.$el.data('course-id');
             this.template = null;

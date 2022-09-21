@@ -9,7 +9,7 @@ edx = edx || {};
     edx.instructor_dashboard.proctoring.AddAllowanceView = Backbone.ModalView.extend({
         name: 'AddAllowanceView',
         template: null,
-        template_url: '/static/proctoring/templates/add-new-allowance.underscore',
+        template_url: (window.baseUrl || '/static/') + 'proctoring/templates/add-new-allowance.underscore',
         initialize: function(options) {
             this.proctored_exams = options.proctored_exams;
             this.proctored_exam_allowance_view = options.proctored_exam_allowance_view;
